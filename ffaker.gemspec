@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-lib = File.expand_path('lib', __dir__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'version'
+require_relative 'lib/version'
 
 Gem::Specification.new do |s|
   s.specification_version = 2 if s.respond_to? :specification_version=
@@ -11,7 +9,6 @@ Gem::Specification.new do |s|
 
   s.name              = 'ffaker'
   s.version           = FFaker::VERSION
-  s.date              = '2020-08-17'
   s.required_ruby_version = '>= 2.5'
 
   s.license = 'MIT'
@@ -47,8 +44,8 @@ Gem::Specification.new do |s|
   s.test_files = Dir['test/**/*']
 
   s.metadata = {
-    'changelog_uri' => 'https://github.com/ffaker/ffaker/blob/master/Changelog.md',
-    'documentation_uri' => 'https://github.com/ffaker/ffaker/blob/master/REFERENCE.md'
+    'changelog_uri' => 'https://github.com/ffaker/ffaker/blob/main/Changelog.md',
+    'documentation_uri' => 'https://github.com/ffaker/ffaker/blob/main/REFERENCE.md'
   }
 
   s.add_development_dependency 'rake', '~> 13.0'

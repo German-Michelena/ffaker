@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'helper'
+require_relative 'helper'
 
 class TestTweet < Test::Unit::TestCase
   include DeterministicHelper
@@ -37,7 +37,7 @@ class TestTweet < Test::Unit::TestCase
   end
 
   def test_short_body
-    assert_between(FFaker::Tweet.body(2).size, 2, 20)
+    assert_between(FFaker::Tweet.body(2).size, 2..20)
   end
 
   def test_tweet

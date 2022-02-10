@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require 'ffaker/utils/array_utils'
-require 'ffaker/utils/random_utils'
-require 'ffaker/utils/unique_utils'
+require_relative 'array_utils'
+require_relative 'random_utils'
+require_relative 'unique_utils'
 
 module FFaker
   module ModuleUtils
@@ -35,5 +35,25 @@ module FFaker
     def unique(max_retries = 10_000)
       @unique_generator ||= FFaker::UniqueUtils.new(self, max_retries)
     end
+
+    # http://en.wikipedia.org/wiki/Luhn_algorithm
+    def luhn_check(number)
+      multiplications = []
+
+      number.split(//).each_with_index do |digit, i|
+        multiplications << i.even? ? digit.to_i * 2 : digit.to_i
+      end
+
+      sum = 0
+      multiplications.each do |num|
+        num.to_s.each_byte do |character|
+          sum += character.chr.to_i
+        end
+      end
+
+      control_digit = (sum % 10).zero? ? 0 : (sum / 10 + 1) * 10 - sum
+      control_digit.to_s
+    end
+
   end
 end

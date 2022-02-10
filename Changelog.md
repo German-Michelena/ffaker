@@ -2,6 +2,31 @@
 
   - Add your change HERE
 
+## 2.20.0
+  - Remove date from gem specification [@AlexWayfer]
+  - Add Number module [@Volosh1n]
+  - Make Italian Phone number deterministic [@Volosh1n]
+
+## 2.19.0
+  - Added Lorem BR [@abnersajr]
+  - Added french company siret and siren generator [@hulous]
+  - Added Games generator [@nicholaskillin]
+  - Added EditorConfig file [@AlexWayfer]
+  - Fixed loadError on scripts/reference.rb [@marocchino]
+  - Removed trailing comma from NameGA first_names_male [@stilist]
+  - Localized Gender and Sport to Russian [@SteveRedka]
+  - Added more italian data [@miscelatore]
+
+## 2.18.0
+  - Remove unneeded 'require' statements [@Volosh1n]
+  - Add PhoneNumberJA [@YutaGoto]
+  - Test with Github actions & Ruby 3 [@marocchino]
+  - Generate reference by CI [@marocchino]
+  - Change the regex to cover all scenarios in lorem_fr [@abnersajr]
+  - Add "Freedom Ipsum" text generator option [@hmaack and @lynnd335]
+  - Fix issues with `FFaker::Image` module [@hmaack]
+  - Fix typo in animal.rb module [@renius]
+
 ## 2.17.0
   - Apply Rubocop's autocorrect [@marocchino]
   - Remove Ruby-2.4 support [@marocchino]
