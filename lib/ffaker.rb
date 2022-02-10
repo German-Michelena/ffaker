@@ -108,6 +108,7 @@ module FFaker
   autoload :IdentificationMX, 'ffaker/identification_mx'
   autoload :IdentificationPL, 'ffaker/identification_pl'
   autoload :IdentificationTW, 'ffaker/identification_tw'
+  autoload :IdentificationPT, 'ffaker/identification_pt'
   autoload :Image, 'ffaker/image'
   autoload :Internet, 'ffaker/internet'
   autoload :InternetSE, 'ffaker/internet_se'
