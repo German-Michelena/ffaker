@@ -22,5 +22,6 @@ module FFaker
 
 
       generated_nif += check_number
+    end
   end
 end
